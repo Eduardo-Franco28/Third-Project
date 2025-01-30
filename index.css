@@ -1,0 +1,1215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    list-style: none;
+}
+body{
+    height: 100vh;
+    overflow-x: hidden;
+}
+main{
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+header{
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+header.rolagem{
+    background-color: #000;
+    transition: all 0.4s ease-in-out;
+}
+header img{
+    width: 120px;
+    height: 110px;
+    margin-left: 20px;
+}
+header nav.menu-desktop ul{
+    padding: 0px 80px;
+}
+header nav.menu-desktop ul a{
+    margin: 40px;
+    list-style-type: none;
+    text-decoration: none;
+    color: orangered;   
+    font-weight: 700;
+    transition: 0.2s linear;
+}
+header nav.menu-desktop ul a:hover{
+    border-bottom: 1.5px solid orangered;
+    font-size: 1.1rem;
+}
+/* ESTILO DO MENU MOBILE */
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 0%;  
+    overflow: hidden;
+    transition: .2s;
+}
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+.menu-mobile.abrir-menu ~ .overlay{
+    display: block;
+}
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav ul li a{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 40px 8%;
+    text-decoration: none;
+}
+.menu-mobile nav ul li a:hover{
+    background-color: orangered;
+    color: #000;
+}
+.menu-mobile .fechar-menu i{
+    padding: 15px 5%;
+    color: #ff4500;
+    font-size: 30px;
+}
+.abrir-menu i{
+    color: #ff4500;
+    font-size: 45px;
+    padding-right: 15px;
+    display: none;
+}
+.overlay{
+    background-color: #000000ac;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888;
+    display: none;
+}
+/* FIM DO HEADER */
+.telaInicial{
+    background: url("./img/Design\ sem\ nome\ \(8\)\ \(1\).png");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.todosTextos{
+    padding-top: 13%;
+    padding-left: 2.8rem;
+    max-width: 600px;
+    cursor: default;
+}
+.danilo-meio-preto{
+    display: none;
+}
+.todosTextos h1{
+    font-size: 2.8em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.todosTextos h1 span{
+    color: orangered;
+}
+.todosTextos h3,h5{
+    color: #ffffffc2;
+    margin-bottom: 30px;
+}
+.btn1{
+    background-color: orangered;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+    border: none;
+    transition: 0.2s linear;
+}
+.btn1 a{
+    color: #000;
+    text-decoration: none;
+}
+.btn1:hover{
+    cursor: pointer;
+    font-size: 1.2em;
+}
+.Consultoria{
+    background-color: #000000;
+    min-height: 100vh;
+}
+.quadrados{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 470px 470px 470px;
+    grid-template-rows: 200px 200px 200px;
+}
+
+.Consultoria h2{
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    color: #ffffff;
+    cursor: default;
+}
+.Consultoria h2{
+    cursor: default;
+}
+.Consultoria h2 span{
+    color: #ff4500;
+    cursor: default;
+}
+.zap{
+    cursor: default;
+}
+.quadradosConsultoria{
+    background-color: #434141;
+    box-shadow: 2px 2px  10px rgba(255, 68, 0, 0.511);
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    transition: all 0.2s ease-in-out;
+}
+.quadradosConsultoria:hover{
+    color: #fff;
+    transform: scale(1.03);
+    cursor: default;
+}
+.quadradosConsultoria div img{
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+.quadradosConsultoria p{
+    font-size: 0.9em;
+}
+/* sobre mim */
+
+.sobre_mim{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1E1C1C;
+    min-height: 90vh;
+}
+.sobre_mim .textoDani{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 150px;
+    max-width: 750px;
+    cursor: default;
+}
+.sobre_mim .textoDani h2{
+    color: orangered;
+    font-size: 2.7em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    cursor: default;
+}
+.sobre_mim .textoDani p{
+    color: #fff;
+    line-height: 2rem;
+}
+.sobre_mim .textoDani p span{
+    border-bottom: 1px solid #ff4500;
+}
+#zap{
+    padding-bottom:50px;
+    padding-left: 0px;
+    text-align: center;
+    color: white;
+}
+.danilo-vivo{
+    display: none;
+}
+/* Card */
+.container{
+    min-height: 100vh;
+    background-color: #000000;
+}
+.container .planos-h2{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    padding-top: 60px;
+    cursor: default;
+}
+.quadrados-planos{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    justify-content: center;
+}
+.card-1,.card-2,.card-3{
+    border: 3px solid #daa520;
+    background-color: #000;
+    margin: 100px 40px;
+    height: 440px;
+    box-shadow: 5px 5px 10px rgb(63, 63, 63);
+    transition: all 0.3s ease-in-out; 
+}
+.card-1 h2,.card-2 h2,.card-3 h2{
+    padding-top: 15px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 5px #000000b6;
+}
+.card-1 h3,.card-2 h3,.card-3 h3{
+    text-align: center;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+.card-1 h4,.card-2 h4,.card-3 h4{
+    margin: 40px 0px;
+    text-align: center;
+    font-weight: 300;
+    color: #ffffff;
+}
+.card-1 a,.card-2 a,.card-3 a{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: block;
+    align-items: center;
+    margin: 20px 50px;
+    text-align: center;
+    text-decoration: 2px underline white;
+    border: 3px solid #daa520;
+    box-shadow: 5px 5px 10px #3f3f3f;
+    cursor: pointer;
+}
+.card-1:hover{
+    background-color: #CD7F32;
+    color: #ffffff;
+    cursor: default;
+    transform: scale(1.03);
+    border: none;
+}
+.card-2:hover{
+    background-color: #858585;
+    color: #ffffff;
+    cursor: default;
+    transform: scale(1.03);
+    border: none;
+}
+.card-3:hover{
+    background-color: #daa520;
+    color: #ffffff;
+    cursor: default;
+    transform: scale(1.03);
+    border: none;
+}
+/* Formação Academica */
+.formação2{
+    background-color: #1E1C1C;
+    border-bottom: 2px solid orangered;
+    min-height: 100vh;
+}
+.formação2 h2{
+    padding: 40px;
+    text-align: left;
+    font-size: 3.5em;
+    color: white;
+    cursor: default;
+    text-indent: 70px;
+    position: relative;
+}
+.formação2 h2 span{
+    display: none;
+}
+.formação2 h2::after{
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #ff4500;
+    position: absolute;
+    left: 110px;
+    bottom: 30px;
+    transition: .5s ease-in-out;
+}
+.formação2 h2.traço-baixo::after{
+    width: 21%;
+}
+.geral{
+    display: flex;
+    justify-content: space-between;
+}
+.formação-itens{
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-direction: column;
+    justify-content: right;
+}
+.formação-itens p{
+    color: white;
+    line-height: 25px;
+    text-align: left;
+    font-weight: 300;
+    max-width: 300px;
+}
+.quadrados-formações{
+    margin: 0px 20px 0px 5px;
+    background-color: #24262b;
+    padding: 20px;
+    width: 350px;
+    height: 250px; 
+    transition: all 0.2s ease-in-out;       
+}
+.quadrados-formações img{
+    width: 100px;
+    height: auto;
+}
+.quadrados-formações:hover{
+    -webkit-text-fill-color: #ffffff;
+    background-color: #767676;
+    box-shadow: 5px 5px 12px #ff4500;
+    transform: scale(1.03);
+    cursor: default;
+}
+.danilo-mostrando{
+    padding-left: 100px;
+    padding-top: 30px;
+}
+.danilo-mostrandoCerto{
+    width: 600px;
+    height: auto;
+}
+
+/* Footer */
+
+.container2{
+    max-width: 1280px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    position: relative;
+    top: 100%;
+    left: 0;
+    padding: 70px 0;
+    background-color: #000000;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px; 
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    cursor: default;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #ff4500;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+.footer-col .social-link a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff33;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.footer-col .social-link a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+@media screen and (max-width: 1440px){
+    .todosTextos h1{
+        font-size: 2.5em;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .todosTextos h1 span{
+        color: orangered;
+    }
+    .todosTextos h3 {
+        color: #ffffffc2;
+        margin-bottom: 30px;
+        font-size: 0.9em;
+    }
+    .quadrados{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 400px 400px 400px;
+        grid-template-rows: 200px 200px 200px;
+    }
+    .quadradosConsultoria p{
+        font-size: 0.8em;
+    }
+    .formação2 h2{
+        padding: 40px;
+        text-align: left;
+        font-size: 3.1em;
+        color: white;
+        cursor: default;
+        text-indent: 70px;
+        position: relative;
+    }
+    .formação-itens p{
+        color: white;
+        line-height: 25px;
+        text-align: left;
+        font-weight: 300;
+        max-width: 300px;
+        font-size: 0.9em;
+    }
+    .quadrados-formações{
+        margin: 0px 20px 0px 5px;
+        background-color: #24262b;
+        padding: 20px;
+        width: 280px;
+        height: 235px; 
+        transition: all 0.2s ease-in-out;       
+    }
+    .quadrados-formações img{
+        width: 80px;
+        height: auto;
+    }
+    .danilo-mostrando{
+        padding-left: 50px;
+        padding-top: 30px;
+    }
+    .danilo-mostrandoCerto{
+        width: 600px;
+        height: auto;
+    }
+}
+@media screen and (max-width: 956px){
+    body{
+        user-select: none;
+        transform: rotate(0deg);
+        height: 100vh;
+    }
+    header nav.menu-desktop ul, header nav.menu-desktop ul a{
+        display: none;
+    }
+    header img{
+        margin-left: 0;
+    }
+    .abrir-menu i{
+        display: block;
+    }
+    .telaInicial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #000;
+    }
+    .danilo-meio-preto{
+        display: block;
+        padding: 3% 3.5% 0px 3.5%;
+        position: relative;
+        animation: flutuar 1s ease-in-out infinite alternate;
+    }
+    .todosTextos{
+        z-index: 10;
+        padding-top: 0px;
+        padding-left: 0;
+        text-align: center;
+        line-height: 40px;
+    }
+    .todosTextos h1{
+        font-size: 2em;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    .todosTextos h1 span{
+        color: #fff;
+    }
+    .todosTextos h3,h5{
+        color: #ffffffc2;
+        margin-bottom: 30px;
+        display: none;
+    }
+    .btn1{
+        background-color: orangered;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 30px;
+        font-size: 1.1em;
+        font-weight: 500;
+        border: none;
+        transition: 0.2s linear; 
+    }
+    .btn1 a{
+        color: #000;
+        text-decoration: none;
+    }
+    .Consultoria{
+        background-color: #24262b;
+        min-height: 200vh;
+    }
+    .quadrados{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 400px;
+        grid-template-rows: 200px;
+    }
+    #zap{
+        margin: 0px auto;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        text-align: center;
+        color: white;
+        font-size: 0.8em;
+        max-width: 350px;
+    }
+    .quadradosConsultoria{
+        background-color: #434141;
+        box-shadow: 2px 2px  10px rgba(255, 68, 0, 0.511);
+        margin: 20px 1.5rem 20px 1.5rem;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        transition: all 0.2s ease-in-out;
+    }
+    .sobre_mim{
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        background-color: #1E1C1C;
+        min-height: 100vh;
+    }
+    .sobre_mim .textoDani{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 1000px;
+        padding-left: 0px;
+    }
+    .sobre_mim .textoDani h2{
+        color: #ff4500;
+        font-size: 2em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .sobre_mim .textoDani p{
+        color: #fff;
+        line-height: 2rem;
+        text-align: center;
+        padding: 0px 10px 20px 10px;
+        text-align: justify;
+    }
+    .sobre_mim .textoDani p span{
+        border-bottom: 1px solid #ff4500;
+        text-align: justify;
+    }
+    .danilo-vivo{
+        display: block;
+        width: 350px;
+        height: auto;  
+        margin: 20px 0px 25px 5%;
+    }
+    .danilos-imgs{
+        display: flex;
+        justify-content: center;
+        padding-right: 35px;
+    }
+    .danilo-none{
+        display: none;
+    }
+    .quadrados-planos{
+        display: grid;
+        grid-template-columns: 350px;
+        justify-content: center;
+    }
+    .card-1,.card-2,.card-3{
+        border: 3px solid #daa520;
+        background-color: #000;
+        margin: 50px 40px;
+        height: 440px;
+        box-shadow: 5px 5px 10px rgb(63, 63, 63);
+        transition: all 0.3s ease-in-out; 
+    }
+    .danilo-mostrandoCerto{
+        display: none;
+    }
+    .formação2{
+        background-color: #1E1C1C;
+        border-bottom: 2px solid orangered;
+        min-height: 160vh;
+    }
+    .formação2 h2{
+        padding: 0px;
+        text-align: left;
+        font-size: 2.9em;
+        color: white;
+        cursor: default;
+        position: relative;
+    }
+    .formação2 h2 span{
+        display: block;
+        color: orangered;
+        font-size: .6em;
+        text-align: center;
+    }
+    .formação2 h2::after{
+        content: " ";
+        width: 0%;
+        height: 4px;
+        background-color: #1E1C1C;
+        position: absolute;
+        left: 70px;
+        bottom: -5px;
+        transition: .5s ease-in-out;
+    }
+    .formação2 h2.traço-baixo::after{
+        width: 65%;
+    }
+    .geral{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .formação-itens{
+        display: grid;
+        grid-template-columns: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .formação-itens p{
+        color: white;
+        line-height: 25px;
+        text-align: left;
+        font-weight: 300;
+        max-width: 300px;
+    }
+    .quadrados-formações{
+        margin: 0px;
+        margin-bottom: 20px;
+        background-color: #24262b;
+        padding: 20px;
+        width: 350px;
+        height: 250px; 
+        transition: all 0.2s ease-in-out;     
+ 
+    }
+    .quadrados-formações img{
+        width: 100px;
+        height: auto;
+    }
+    .quadrados-formações:hover{
+        -webkit-text-fill-color: #ffffff;
+        background-color: #767676;
+        box-shadow: 5px 5px 12px #ff4500;
+        transform: scale(1.03);
+        cursor: default;
+    }
+    .danilo-mostrando{
+        padding-left: 0;
+        padding-top: 0;
+    }
+    .image-musculo{
+        padding-left: 10px;
+        padding-bottom: 5px;
+    }
+}
+
+@media(max-width: 767px){
+    .footer-col { 
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574){
+    .footer-col { 
+    width: 100px;
+    margin-bottom: 30px;
+}
+}
+@media screen and (min-width: 1920px){
+    main{
+        max-width: 1920px;
+    }
+    header{
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+    header.rolagem{
+        background-color: #000;
+        transition: all 0.4s ease-in-out;
+    }
+    header img{
+        width: 150px;
+        height: 130px;
+        margin-left: 20px;
+    }
+    header nav.menu-desktop ul{
+        padding: 0px 80px;
+    }
+    header nav.menu-desktop ul a{
+        margin: 40px;
+        list-style-type: none;
+        text-decoration: none;
+        color: orangered;   
+        font-weight: 700;
+        font-size: 1.3em;
+        transition: 0.2s linear;
+    }
+    header nav.menu-desktop ul a:hover{
+        border-bottom: 1.5px solid orangered;
+        font-size: 1.4rem;
+    }
+    /* FIM DO HEADER */
+    .telaInicial{
+        background: url("./img/Design\ sem\ nome\ \(8\)\ \(1\).png");
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .todosTextos{
+        padding-top: 15%;
+        padding-left: 2.8rem;
+        max-width: 700px;
+        cursor: default;
+    }
+    .danilo-meio-preto{
+        display: none;
+    }
+    .todosTextos h1{
+        font-size: 3em;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .todosTextos h1 span{
+        color: orangered;
+    }
+    .todosTextos h3{
+        color: #ffffffc2;
+        margin-bottom: 30px;
+        font-size: 1.19em;
+    }
+    .todosTextos h5{
+        font-size: 1em;
+    }
+    .btn1{
+        background-color: orangered;
+        padding: 22.5px;
+        border-radius: 35px;
+        font-size: 1.2em;
+        font-weight: 500;
+        border: none;
+        transition: 0.2s linear;
+    }
+    .btn1 a{
+        color: #000;
+        text-decoration: none;
+    }
+    .btn1:hover{
+        cursor: pointer;
+        font-size: 1.3em;
+    }
+    .Consultoria{
+        background-color: #000000;
+        min-height: 100vh;
+    }
+    .quadrados{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 530px 530px 530px;
+        grid-template-rows: 250px 250px 250px;
+    }
+    
+    .Consultoria h2{
+        text-align: center;
+        font-size: 3.8em;
+        padding-bottom: 60px;
+        padding-top: 60px;
+        color: #ffffff;
+        cursor: default;
+    }
+    .Consultoria h2{
+        cursor: default;
+    }
+    .Consultoria h2 span{
+        color: #ff4500;
+        cursor: default;
+    }
+    .zap{
+        cursor: default;
+    }
+    #zap{
+        padding-bottom:50px;
+        padding-left: 0px;
+        text-align: center;
+        color: white;
+        font-size: 1.1em;
+    }
+    .quadradosConsultoria{
+        background-color: #434141;
+        box-shadow: 2px 2px  10px rgba(255, 68, 0, 0.511);
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        transition: all 0.2s ease-in-out;
+    }
+    .quadradosConsultoria:hover{
+        color: #fff;
+        transform: scale(1.03);
+        cursor: default;
+    }
+    .quadradosConsultoria div img{
+        width: 100px;
+        height: auto;
+        margin-right: 20px;
+    }
+    .quadradosConsultoria p{
+        font-size: 1em;
+    }
+    /* sobre mim */
+    
+    .sobre_mim{
+        display: flex;
+        justify-content: space-between;
+        background-color: #1E1C1C;
+        min-height: 90vh;
+    }
+    .sobre_mim .textoDani{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 180px;
+        max-width: 810px;
+        cursor: default;
+    }
+    .sobre_mim .textoDani h2{
+        color: orangered;
+        font-size: 3.3em;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        cursor: default;
+    }
+    .sobre_mim .textoDani p{
+        color: #fff;
+        line-height: 2rem;
+        font-size: 1.2em;
+    }
+    .sobre_mim .textoDani p span{
+        border-bottom: 1px solid #ff4500;
+    }
+    .danilo-vivo{
+        display: none;
+    }
+    .danilo-none{
+        width: 800px;
+    }
+    /* Card */
+    .container{
+        min-height: 90vh;
+        background-color: #000000;
+    }
+    .container .planos-h2{
+        color: white;
+        font-size: 3.5em;
+        text-align: center;
+        padding-top: 60px;
+        cursor: default;
+    }
+    .quadrados-planos{
+        display: grid;
+        grid-template-columns: 350px 350px 350px;
+        justify-content: center;
+    }
+    .card-1,.card-2,.card-3{
+        justify-content: center;
+        border: 3px solid #daa520;
+        background-color: #000;
+        margin: 100px 15px;    
+        height: 490px;
+        box-shadow: 5px 5px 10px #3f3f3f;
+        transition: all 0.3s ease-in-out;
+    }
+    .card-1 h2,.card-2 h2,.card-3 h2{
+        padding-top: 15px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 2em;
+        text-shadow: 2px 2px 5px #000000b6;
+    }
+    .card-1 h3,.card-2 h3,.card-3 h3{
+        text-align: center;
+        font-size: 2.8em;
+        color: #ffffff;
+    }
+    .card-1 h4,.card-2 h4,.card-3 h4{
+        margin: 45px 0px;
+        text-align: center;
+        font-weight: 300;
+        color: #ffffff;
+        font-size: 1.1em;
+    }
+    .card-1 a,.card-2 a,.card-3 a{
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 1.2em;
+        padding: 15px 20px;
+        display: block;
+        align-items: center;
+        margin: 20px 50px;
+        text-align: center;
+        text-decoration: 2px underline white;
+        border: 3px solid #daa520;
+        box-shadow: 5px 5px 10px #3f3f3f;
+        cursor: pointer;
+    }
+    .card-1:hover{
+        background-color: #CD7F32;
+        color: #ffffff;
+        cursor: default;
+        transform: scale(1.03);
+        border: none;
+    }
+    .card-2:hover{
+        background-color: #858585;
+        color: #ffffff;
+        cursor: default;
+        transform: scale(1.03);
+        border: none;
+    }
+    .card-3:hover{
+        background-color: #daa520;
+        color: #ffffff;
+        cursor: default;
+        transform: scale(1.03);
+        border: none;
+    }
+    /* Formação Academica */
+    .formação2{
+        background-color: #1E1C1C;
+        border-bottom: 2px solid orangered;
+        min-height: 90vh;
+    }
+    .formação2 h2{
+        padding: 40px;
+        text-align: left;
+        font-size: 4.2em;
+        color: white;
+        cursor: default;
+        text-indent: 70px;
+        position: relative;
+    }
+    .formação2 h2 span{
+        display: none;
+    }
+    .formação2 h2::after{
+        content: " ";
+        width: 0%;
+        height: 4px;
+        background-color: #ff4500;
+        position: absolute;
+        left: 110px;
+        bottom: 30px;
+        transition: .5s ease-in-out;
+    }
+    .formação2 h2.traço-baixo::after{
+        width: 20%;
+    }
+    .geral{
+        display: flex;
+        justify-content: space-between;
+    }
+    .formação-itens{
+        display: grid;
+        grid-template-columns: auto auto;
+        flex-direction: column;
+        justify-content: right;
+    }
+    .formação-itens p{
+        color: white;
+        line-height: 25px;
+        text-align: left;
+        font-weight: 300;
+        max-width: 300px;
+        font-size: 1.1em;
+    }
+    .quadrados-formações{
+        margin: 0px 30px 0px 5px;
+        background-color: #24262b;
+        padding: 20px;
+        width: 420px;
+        height: 300px; 
+        transition: all 0.2s ease-in-out;       
+    }
+    .quadrados-formações img{
+        width: 120px;
+        height: auto;
+    }
+    .quadrados-formações:hover{
+        -webkit-text-fill-color: #ffffff;
+        background-color: #767676;
+        box-shadow: 5px 5px 12px #ff4500;
+        transform: scale(1.03);
+        cursor: default;
+    }
+    .danilo-mostrando{
+        padding-left: 100px;
+        padding-top: 30px;
+    }
+    .danilo-mostrandoCerto{
+        width: 800px;
+        height: auto;
+    }
+    
+    /* Footer */
+    
+    .container2{
+        max-width: 1280px;
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        position: relative;
+        top: 100%;
+        left: 0;
+        padding: 70px 0;
+        background-color: #000000;
+    }
+    .footer-col{
+        width: 25%;
+        padding: 0 15px; 
+    }
+    .footer-col h4{
+        font-size: 22px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+        cursor: default;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #ff4500;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+        font-size: 20px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+    }
+    .footer-col .social-link a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: #ffffff33;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+    .footer-col .social-link a:hover{
+        color: #24262b;
+        background-color: #ffffff;
+    }
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: 50px;
+    }
+}
